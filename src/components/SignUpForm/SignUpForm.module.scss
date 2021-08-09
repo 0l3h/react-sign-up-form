@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 860px;
+    min-width: 360px;
+    box-shadow: 0px 0px 5px 1px grey;
+    padding: 10px;
+    
+    & > label {
+        display: flex;
+        margin: 10px 0;
+    }
+}
+
+input {
+    margin-left: auto;
+    width: 70%;
+}
+
+.valid {
+    background-color: rgb(185, 185, 255);
+    border: 2px solid rgb(62, 62, 255);
+}
+
+.invalid {
+    border: 2px solid red;
+}
