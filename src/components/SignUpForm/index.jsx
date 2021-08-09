@@ -17,10 +17,20 @@ class SignUpForm extends Component {
         this.setState({[name]: value});
     }
 
+    /** Method prevents form from submission 
+     * 
+     * @param {Event} e 
+     */
     preventDefault = e => {
         e.preventDefault();
     }
 
+    /** Checks if the value of the input is valid
+     * 
+     * @param {String} inputName Name of input 
+     * @param {RegExp} pattern Regular expression 
+     * @returns 
+     */
     isInputValid = (inputName, pattern) => {
         const {valid, invalid} = styles;
         return classNames(pattern.test(this.state[inputName])? valid : invalid);
@@ -35,6 +45,8 @@ class SignUpForm extends Component {
 
         return (
             <form onSubmit={this.preventDefault}>
+                <h1>Sign up</h1>
+
                 <label>
                     Name
                     <input 
